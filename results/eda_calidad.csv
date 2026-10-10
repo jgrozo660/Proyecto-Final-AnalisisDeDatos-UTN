@@ -1,0 +1,9 @@
+chequeo,valor
+Nulos explícitos (train),0
+Nulos explícitos (test),0
+tenure = 0 (train),8
+tenure = 0 (test),3
+TotalCharges = mediana con tenure = 0 (train),8
+Filas duplicadas sin customerID (train),15
+customerID repetidos (train),0
+customerID compartidos train/test,0

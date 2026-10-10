@@ -1,0 +1,26 @@
+variable,categoria,clientes,SHAP medio
+Contract,Month-to-month,602,0.49148763673702034
+Contract,One year,255,-0.22560113049035874
+Contract,Two year,270,-0.9952525772161971
+InternetService,DSL,366,-0.7178742191492642
+InternetService,Fiber optic,517,0.5264557180888829
+InternetService,No,244,-0.3286785363956229
+PaymentMethod,Bank transfer (automatic),251,-0.13080080948685072
+PaymentMethod,Credit card (automatic),252,-0.17649634894637398
+PaymentMethod,Electronic check,381,0.16706954063785728
+PaymentMethod,Mailed check,243,-0.06715534654576329
+TechSupport,No,544,0.18262614325124968
+TechSupport,No internet service,244,-0.2472508097760957
+TechSupport,Yes,339,-0.21118919107257647
+OnlineSecurity,No,556,0.15449818374368718
+OnlineSecurity,No internet service,244,-0.28821284047941814
+OnlineSecurity,Yes,327,-0.26498529297165285
+tenure,tercil bajo,376,1.34545152153677
+tenure,tercil medio,375,0.13577456672168217
+tenure,tercil alto,376,-1.4016002817223931
+MonthlyCharges,tercil bajo,376,0.7071227011243878
+MonthlyCharges,tercil medio,375,-0.0024721673671723975
+MonthlyCharges,tercil alto,376,-0.4715095065677349
+n_servicios,tercil bajo,376,-0.17174929192376687
+n_servicios,tercil medio,375,-0.02235291498563304
+n_servicios,tercil alto,376,0.16983194591114106

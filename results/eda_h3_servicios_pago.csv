@@ -1,0 +1,11 @@
+variable,categoria,clientes,tasa_churn
+TechSupport,No,2771,0.41753879465896787
+TechSupport,No internet service,1214,0.07248764415156507
+TechSupport,Yes,1649,0.15160703456640387
+OnlineSecurity,No,2797,0.4193779048981051
+OnlineSecurity,No internet service,1214,0.07248764415156507
+OnlineSecurity,Yes,1623,0.14417744916820702
+PaymentMethod,Bank transfer (automatic),1244,0.16157556270096463
+PaymentMethod,Credit card (automatic),1213,0.14921681780708987
+PaymentMethod,Electronic check,1891,0.4574299312533051
+PaymentMethod,Mailed check,1286,0.19284603421461896

@@ -1,0 +1,2 @@
+mejor_PR_AUC_CV,umbral_empate,empatados,elegido
+Logística sin ponderar,0.6356482867721248,"Logística sin ponderar, Logística + SMOTE (solo train), Logística balanceada (pre-entrega), Random Forest, Gradient Boosting",Logística sin ponderar
