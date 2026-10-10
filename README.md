@@ -1,9 +1,21 @@
 # Proyecto Final Integrador - Predicción de abandono (churn) de clientes
 
-> **Diplomado en Ciencia de Datos y Análisis Avanzado (UTN.BA) - Unidad 9**
-> Integrantes: Agustín Bilche Braga, Agustina Díaz, Carlos Grozo, Milagros Crespo, Luana Zalcman.
+> **Diplomado en Ciencia de Datos y Análisis Avanzado (UTN.BA) - Unidad 10 - Proyecto Final Integrador**
+> **Grupo 4** - Integrantes: Agustín Bilche Braga, Agustina Díaz, Carlos Grozo, Milagros Crespo, Luana Zalcman.
 
 Una empresa de telecomunicaciones pierde a cerca de **1 de cada 4 clientes** de su cartera (tasa de churn observada en la muestra: 26,5 %). El área de Retención puede contactar aproximadamente al **20 % de la cartera** por campaña. El proyecto construye un **ranking de riesgo de abandono** para que ese cupo se use primero con los clientes más propensos a irse.
+
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jgrozo660/Proyecto-Final-AnalisisDeDatos-UTN/blob/main/proyecto_integrador.ipynb)
+
+## Entregables
+
+| Recurso | Archivo |
+|---|---|
+| Informe Final escrito | [`docs/Informe_Final_Proyecto_Integrador.pdf`](docs/Informe_Final_Proyecto_Integrador.pdf) |
+| Presentación Final (12 diapositivas) | [`docs/Presentacion_Final_Proyecto_Integrador.pdf`](docs/Presentacion_Final_Proyecto_Integrador.pdf) (editable: `.pptx`) |
+| Código Python | [`proyecto_integrador.ipynb`](proyecto_integrador.ipynb) - también en [Google Colab](https://colab.research.google.com/github/jgrozo660/Proyecto-Final-AnalisisDeDatos-UTN/blob/main/proyecto_integrador.ipynb) |
+| Pre-entrega | [`docs/Pre-entrega_Proyecto_Final_Integrador.pdf`](docs/Pre-entrega_Proyecto_Final_Integrador.pdf) |
+| Predicciones sobre `test.csv` | [`results/predicciones_test.csv`](results/predicciones_test.csv) y [`results/submission.csv`](results/submission.csv) |
 
 ## Resultado principal
 
@@ -61,10 +73,16 @@ Usar el ranking como **herramienta de priorización con intervención humana**, 
 │   └── README.md
 └── docs/
     ├── Pre-entrega_Proyecto_Final_Integrador.pdf
-    └── Informe_Final_Proyecto_Integrador.pdf
+    ├── Informe_Final_Proyecto_Integrador.pdf
+    ├── Presentacion_Final_Proyecto_Integrador.pdf
+    └── Presentacion_Final_Proyecto_Integrador.pptx
 ```
 
-## Cómo reproducir
+## Cómo ejecutar el código
+
+**Opción 1 - Google Colab (sin instalar nada):** abrir el notebook con el botón *Open in Colab* de arriba y ejecutar *Entorno de ejecución → Ejecutar todas*. La primera celda clona este repositorio para obtener los datos e instala las librerías que falten.
+
+**Opción 2 - Local:**
 
 ```bash
 git clone https://github.com/jgrozo660/Proyecto-Final-AnalisisDeDatos-UTN
@@ -73,4 +91,4 @@ pip install -r requirements.txt
 jupyter nbconvert --to notebook --execute --inplace proyecto_integrador.ipynb
 ```
 
-Semilla fija (`random_state=42`). La ejecución completa tarda alrededor de un minuto.
+También puede abrirse con `jupyter notebook proyecto_integrador.ipynb` y ejecutar todas las celdas. Requiere Python 3.10 o superior. Semilla fija (`random_state=42`); la ejecución completa tarda alrededor de un minuto y regenera todo el contenido de `results/`.
