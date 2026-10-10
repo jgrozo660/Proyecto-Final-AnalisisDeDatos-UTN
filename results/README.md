@@ -5,7 +5,7 @@ Todos los archivos se generan al ejecutar `proyecto_integrador.ipynb` y son los 
 | Archivo | Contenido |
 |---|---|
 | `eda_calidad.csv` | Nulos, centinela de `TotalCharges`, duplicados |
-| `eda_h1_contrato.csv` … `eda_h4_cargo_mensual.csv`, `fig_eda.png` | Evidencia descriptiva de las hipótesis H1-H4 |
+| `eda_h1_contrato.csv`, `eda_h2_tenure.csv`, `eda_h3_servicios_pago.csv`, `eda_h4_cargo_mensual.csv`, `fig_eda.png` | Evidencia descriptiva de las hipótesis H1-H4 |
 | `cv_5folds.csv`, `cv_resumen.csv` | Validación cruzada de 5 folds (5 modelos) |
 | `seleccion_modelo.csv` | Regla ex ante: umbral de empate, empatados y elegido |
 | `model_metrics.csv` | Test interno: ranking aleatorio y 5 modelos (PR-AUC, ROC-AUC, @20 %, @0,5, Brier) |
@@ -18,5 +18,5 @@ Todos los archivos se generan al ejecutar `proyecto_integrador.ipynb` y son los 
 | `ablaciones.csv` | Ablaciones de H1-H4 |
 | `auditoria_grupos.csv`, `auditoria_grupos_oof.csv`, `brecha_genero_ic.csv`, `sin_atributos_sensibles.csv` | Auditoría ética por grupos |
 | `escenario_economico.csv`, `sensibilidad_economica.csv` | Escenario económico paramétrico y sensibilidad |
-| `predicciones_test.csv`, `submission.csv` | Predicciones sobre `test.csv` |
+| `predicciones_test.csv`, `submission.csv` | Predicciones sobre data/test.csv |
 | `resumen.csv` | Números principales |
