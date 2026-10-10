@@ -2,7 +2,7 @@
 
 | # | Etapa | Decisión | Motivo | Evidencia / consecuencia |
 |---|---|---|---|---|
-| 1 | Datos | Usar `train.csv` (5.634 filas, con `Churn`) y `test.csv` (1.409 filas, sin `Churn`) de la competencia de Kaggle | Archivos provistos por la cátedra | El notebook valida forma y columnas al cargar |
+| 1 | Datos | Usar `train.csv` (5.634 filas, con `Churn`) y `test.csv` (1.409 filas, sin `Churn`) de la competencia de Kaggle | Datos públicos de la competencia, con la variable objetivo solo en `train.csv` | El notebook valida forma y columnas al cargar |
 | 2 | Negocio | Hablar de **tasa de churn observada en la muestra** (26,5 %), no de tasa mensual | El dataset es una foto estática, sin fechas (devolución del tutor) | Toda la redacción usa este término |
 | 3 | Calidad | `TotalCharges = 0` cuando `tenure = 0` | Los 8 clientes con `tenure = 0` traían `TotalCharges = 1397,475`, la mediana de la columna: el archivo venía pre-imputado | La pre-entrega había reportado "0 nulos"; se corrige |
 | 4 | Calidad | Conservar los 15 duplicados sin `customerID` | Tienen IDs distintos: son clientes diferentes con el mismo perfil | Sin efecto material |
