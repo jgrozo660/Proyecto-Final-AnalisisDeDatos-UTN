@@ -12,6 +12,7 @@ Todos los archivos se generan al ejecutar `proyecto_integrador.ipynb` y son los 
 | `bootstrap_ic.csv` | IC 95 % del modelo elegido y diferencia contra Gradient Boosting |
 | `captura_por_cupo.csv`, `lift_deciles.csv`, `fig_pr_ganancia.png` | Captura por cupo (10-50 %), lift por deciles, curvas PR y de ganancia |
 | `fig_calibracion.png`, `umbral_f1.csv` | Calibración y umbral Sí/No elegido con OOF |
+| `matriz_confusion.csv`, `reporte_clasificacion.csv`, `fig_roc.png` | Matriz de confusión, precisión/recall/F1 por clase y curva ROC |
 | `shap_global.csv`, `shap_direccion.csv`, `fig_shap_global.png` | SHAP global y dirección del efecto por categoría |
 | `shap_local_case.csv`, `fig_shap_local.png` | SHAP local de un cliente real del top 20 % |
 | `ablaciones.csv` | Ablaciones de H1-H4 |
