@@ -24,5 +24,5 @@
 | 20 | Hipótesis | Prueba de quitar cada grupo de variables, sobre el mismo test | Mide el aporte propio de cada bloque | Antigüedad: mayor caída; contrato + antigüedad juntos: −7,6 p.p. de PR-AUC |
 | 21 | Ética | Auditar recall por género, edad (SeniorCitizen), pareja y dependientes, en test y en validación cruzada | Atributos sensibles | La brecha por género del test no se repite en la validación cruzada; los clientes con dependientes quedan sub-detectados en ambos |
 | 22 | Ética | Evaluar el modelo sin `gender` ni `SeniorCitizen` | Minimización de atributos sensibles | Desempeño igual (PR-AUC 0,664 vs. 0,666): se recomienda quitarlos en producción |
-| 23 | Negocio | Escenario económico paramétrico (USD 15 por contacto, 30 % de éxito, 12 meses de facturación) | No hay costos reales de la empresa | Se reporta sensibilidad a los supuestos |
+| 23 | Negocio | Valor del cliente = `MonthlyCharges` × 24 meses; retención del 30 %; costo por cliente retenido de USD 100, 1.000 y 10.000 | No hay costos reales de la empresa; se usan valores genéricos | Conviene retener mientras cueste menos que el valor del cliente; priorizar por valor en riesgo preserva más valor que por riesgo o al azar |
 | 24 | Entrega | Modelo final reentrenado con todo `train.csv` para predecir `test.csv` | Usa toda la información disponible | `predicciones_test.csv`, `submission.csv` |

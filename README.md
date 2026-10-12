@@ -21,7 +21,7 @@ Una empresa de telecomunicaciones pierde a cerca de **1 de cada 4 clientes** de 
 
 Todos los números salen de `proyecto_integrador.ipynb` y se guardan en `results/`.
 
-**KPI de negocio:** porcentaje de los clientes que abandonan que quedan dentro del 20 % contactado. **KPI de impacto:** beneficio neto anual de la campaña frente a contactar al azar.
+**KPI de negocio:** porcentaje de los clientes que abandonan que quedan dentro del 20 % contactado. **KPI de impacto:** valor neto preservado por la campaña (valor de los clientes retenidos menos el costo de retenerlos) frente a contactar al azar.
 
 | Métrica (test interno, 1.127 clientes) | Contacto al azar | Modelo elegido (Regresión Logística) |
 |---|---:|---:|
@@ -46,7 +46,7 @@ En el test, Gradient Boosting obtiene una PR-AUC apenas mayor (0,673 vs. 0,666),
 
 ### Recomendación
 
-Usar el ranking como **herramienta de priorización con intervención humana**, empezar con un **piloto A/B** (20 % priorizado por el modelo vs. 20 % al azar) para medir la tasa real de retención, y monitorear el recall por grupo (en particular, los clientes con dependientes quedan sub-detectados).
+Usar el ranking como **herramienta de priorización con intervención humana**, priorizando a los clientes que se van y además gastan mucho (por **valor en riesgo**: probabilidad × valor del cliente). Con un costo de USD 100 por cliente retenido, eso preserva unos USD 824 mil netos por cada 10.000 clientes (3 veces más que al azar); con USD 10.000 por retenido no conviene retener a nadie. Además, empezar con un **piloto A/B** (20 % priorizado por el modelo vs. 20 % al azar) para medir la tasa real de retención, y monitorear el recall por grupo (en particular, los clientes con dependientes quedan sub-detectados).
 
 ## Cambios respecto de la pre-entrega (devolución del tutor)
 

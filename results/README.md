@@ -17,6 +17,6 @@ Todos los archivos se generan al ejecutar `proyecto_integrador.ipynb` y son los 
 | `shap_local_case.csv`, `fig_shap_local.png` | SHAP local de un cliente real del top 20 % |
 | `quitar_variables.csv` | Prueba de quitar cada grupo de variables (H1-H4) |
 | `auditoria_grupos.csv`, `auditoria_grupos_validacion_cruzada.csv`, `brecha_genero_ic.csv`, `sin_atributos_sensibles.csv` | Auditoría ética por grupos |
-| `escenario_economico.csv`, `sensibilidad_economica.csv` | Escenario económico paramétrico y sensibilidad |
+| `valor_cliente_escenarios.csv` | Valor neto preservado según el costo por cliente retenido (USD 100, 1.000, 10.000), al azar, por riesgo y por valor en riesgo |
 | `predicciones_test.csv`, `submission.csv` | Predicciones sobre data/test.csv |
 | `resumen.csv` | Números principales |
