@@ -1,4 +1,4 @@
-atributo,grupo,clientes,tasa_real,seleccionados del grupo,recall del grupo (OOF)
+atributo,grupo,clientes,tasa_real,seleccionados del grupo,recall del grupo (validación cruzada)
 gender,Female,2236,0.2692307692307692,0.20885509838998212,0.5033222591362126
 gender,Male,2271,0.261558784676354,0.19154557463672392,0.494949494949495
 SeniorCitizen,No,3778,0.23769190047644256,0.16119640021175224,0.4465478841870824

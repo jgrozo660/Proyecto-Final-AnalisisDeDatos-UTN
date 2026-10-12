@@ -1,6 +1,6 @@
 indicador,valor
 Tasa de churn observada (train.csv),0.2653532126375577
-Modelo elegido (regla ex ante),Logística sin ponderar
+Modelo elegido (regla definida de antemano),Logística sin ponderar
 Empatados en CV,"Logística sin ponderar, Logística + SMOTE (solo train), Logística balanceada (pre-entrega), Random Forest, Gradient Boosting"
 PR-AUC test (elegido),0.6659280730207966
 PR-AUC test (piso = tasa),0.2653061224489796
@@ -9,8 +9,8 @@ Recall@20% test (elegido),0.5317725752508361
 Recall@20% azar,0.20095150501672243
 Recall@20% techo,0.7538461538461538
 Precision@20% test (elegido),0.7035398230088495
-Lift@20% test (elegido),2.651803948264125
+Veces_azar@20% test (elegido),2.651803948264125
 Recall@20% test (Gradient Boosting),0.5284280936454849
 PR-AUC test (Gradient Boosting),0.6734456045827795
-Umbral F1 (OOF),0.32823369890801274
+Umbral F1 (validación cruzada),0.32823369890801274
 "Beneficio neto modelo − azar (USD, 10.000 clientes)",276059.7311446317
