@@ -13,16 +13,16 @@
 | 9 | Validación | **No** hay validación temporal | No hay fechas en los datos; no se simula | Se reporta como limitación |
 | 10 | Modelado | Comparar logística (balanceada, sin ponderar, + SMOTE), Random Forest y Gradient Boosting | Cada uno responde una pregunta; no se agregan modelos de relleno (devolución del tutor) | `model_metrics.csv` |
 | 11 | Modelado | SMOTE dentro de `imblearn.Pipeline` | Así solo se aplica a los datos de entrenamiento de cada fold (devolución del tutor) | No mejora el ranking (PR-AUC CV 0,659, igual que sin SMOTE) |
-| 12 | Selección | Regla ex ante: empate si PR-AUC media ≥ mejor − 1 desvío; entre empatados, el más simple | Evita elegir por el mejor número del test | Los 5 empatan; se elige logística sin ponderar |
+| 12 | Selección | Regla definida de antemano: empate si PR-AUC media ≥ mejor − 1 desvío; entre empatados, el más simple | Evita elegir por el mejor número del test | Los 5 empatan; se elige logística sin ponderar |
 | 13 | Métricas | Recall @ 20 % como KPI de negocio, PR-AUC como métrica técnica principal | Cupo operativo + clase minoritaria (devolución del tutor) | Accuracy solo como referencia |
-| 14 | Métricas | Meta ex ante: Recall @ 20 % ≥ 55 % (mínimo 50 %); techo teórico 75 % | Fijada antes de correr los modelos de la entrega final | Resultado 53,2 %: cumple el mínimo, no la meta |
-| 15 | Evaluación | Intervalos por bootstrap (2.000 remuestreos) | El test tiene ~300 abandonos; diferencias de 1-2 puntos pueden ser ruido | GB vs. logística: diferencia no significativa |
-| 16 | Calibración | Usar la logística sin ponderar para leer probabilidades | `class_weight` y SMOTE inflan las probabilidades | Brier 0,133 vs. 0,163 (balanceada) |
-| 17 | Umbral | Umbral Sí/No = 0,328, el que maximiza F1 en predicciones OOF del desarrollo | No se elige con el test | Recall 72,6 %, precisión 56,7 % en test |
+| 14 | Métricas | Meta definida de antemano: Recall @ 20 % ≥ 55 % (mínimo 50 %); techo teórico 75 % | Fijada antes de correr los modelos de la entrega final | Resultado 53,2 %: cumple el mínimo, no la meta |
+| 15 | Evaluación | Intervalos de confianza del 95 % remuestreando el test 2.000 veces | El test tiene ~300 abandonos; diferencias de 1-2 puntos pueden ser ruido | GB vs. logística: diferencia no significativa |
+| 16 | Probabilidades | Usar la logística sin ponderar para leer probabilidades | `class_weight` y SMOTE inflan las probabilidades | La balanceada sobreestima el riesgo; la sin ponderar se acerca a las tasas reales |
+| 17 | Umbral | Umbral Sí/No = 0,328, el que maximiza F1 en las predicciones de la validación cruzada | No se elige con el test | Recall 72,6 %, precisión 56,7 % en test |
 | 18 | Interpretación | SHAP (LinearExplainer) sobre el test, sumando one-hot por variable original | Lectura de negocio | SHAP describe el modelo, no causalidad |
 | 19 | Interpretación | Leer `MonthlyCharges` con cautela | Su efecto condicional es negativo porque fibra y streaming ya explican los cargos altos (colinealidad) | H4 no se sostiene por encima de los servicios contratados |
-| 20 | Hipótesis | Ablaciones sobre el mismo test | Mide el aporte propio de cada bloque | Antigüedad: mayor caída; contrato + antigüedad juntos: −7,6 p.p. de PR-AUC |
-| 21 | Ética | Auditar recall por género, edad (SeniorCitizen), pareja y dependientes, en test y en OOF | Atributos sensibles | La brecha por género del test no se repite en OOF; los clientes con dependientes quedan sub-detectados en ambos |
+| 20 | Hipótesis | Prueba de quitar cada grupo de variables, sobre el mismo test | Mide el aporte propio de cada bloque | Antigüedad: mayor caída; contrato + antigüedad juntos: −7,6 p.p. de PR-AUC |
+| 21 | Ética | Auditar recall por género, edad (SeniorCitizen), pareja y dependientes, en test y en validación cruzada | Atributos sensibles | La brecha por género del test no se repite en la validación cruzada; los clientes con dependientes quedan sub-detectados en ambos |
 | 22 | Ética | Evaluar el modelo sin `gender` ni `SeniorCitizen` | Minimización de atributos sensibles | Desempeño igual (PR-AUC 0,664 vs. 0,666): se recomienda quitarlos en producción |
 | 23 | Negocio | Escenario económico paramétrico (USD 15 por contacto, 30 % de éxito, 12 meses de facturación) | No hay costos reales de la empresa | Se reporta sensibilidad a los supuestos |
 | 24 | Entrega | Modelo final reentrenado con todo `train.csv` para predecir `test.csv` | Usa toda la información disponible | `predicciones_test.csv`, `submission.csv` |

@@ -32,9 +32,9 @@ Contactando al 20 % mejor rankeado se detecta **2,65 veces** más abandonos que 
 
 ### Cómo se eligió el modelo
 
-Se compararon la Regresión Logística de la pre-entrega (balanceada), la logística sin ponderar, la logística con SMOTE aplicado solo en entrenamiento, Random Forest y Gradient Boosting, con validación cruzada de 5 folds. **Los cinco quedan empatados** (todos dentro de un desvío de la mejor PR-AUC, 0,659). La regla fijada antes de mirar el test elige el más simple: **Regresión Logística sin ponderar**, que además tiene las probabilidades mejor calibradas (Brier 0,133).
+Se compararon la Regresión Logística de la pre-entrega (balanceada), la logística sin ponderar, la logística con SMOTE aplicado solo en entrenamiento, Random Forest y Gradient Boosting, con validación cruzada de 5 folds. **Los cinco quedan empatados** (todos dentro de un desvío de la mejor PR-AUC, 0,659). La regla fijada antes de mirar el test elige el más simple: **Regresión Logística sin ponderar**, que además da las probabilidades más realistas.
 
-En el test, Gradient Boosting obtiene una PR-AUC apenas mayor (0,673 vs. 0,666), pero la diferencia no es significativa (IC 95 % de la diferencia: -0,034 a +0,018). Los modelos de árboles no aportan señal adicional en este dataset.
+En el test, Gradient Boosting obtiene una PR-AUC apenas mayor (0,673 vs. 0,666), pero la diferencia no es significativa (intervalo de confianza del 95 % de la diferencia: -0,034 a +0,018). Los modelos de árboles no aportan señal adicional en este dataset.
 
 ### Qué explica el riesgo
 
