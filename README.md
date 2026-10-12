@@ -21,6 +21,8 @@ Una empresa de telecomunicaciones pierde a cerca de **1 de cada 4 clientes** de 
 
 Todos los números salen de `proyecto_integrador.ipynb` y se guardan en `results/`.
 
+**KPI de negocio:** porcentaje de los clientes que abandonan que quedan dentro del 20 % contactado. **KPI de impacto:** beneficio neto anual de la campaña frente a contactar al azar.
+
 | Métrica (test interno, 1.127 clientes) | Contacto al azar | Modelo elegido (Regresión Logística) |
 |---|---:|---:|
 | **Abandonos detectados contactando al 20 % de mayor riesgo** | 20,1 % | **53,2 %** (IC 95 %: 49,2 % - 57,9 %) |
