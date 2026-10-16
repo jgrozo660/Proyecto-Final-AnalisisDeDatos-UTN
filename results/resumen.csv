@@ -15,5 +15,9 @@ PR-AUC test (Gradient Boosting),0.6734456045827795
 Umbral F1 (validación cruzada),0.32823369890801274
 "Valor neto por valor en riesgo, costo USD 100 (10.000 clientes)",823584.383318545
 Costo máximo para retener un Golden (USD),854.1419055537315
+Costo máximo para retener un Golden / CAC,2.847139685179105
 Clientes Golden (por 10.000),1614.9068322981368
+Costo de desarrollo del proyecto (USD),5600.0
+Costo del proyecto en el primer año (USD),8600.0
+Golden retenidos necesarios para recuperar el desarrollo,8
 "Valor neto al azar, costo USD 100 (10.000 clientes)",276468.7133984028

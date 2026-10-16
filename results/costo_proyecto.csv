@@ -1,0 +1,7 @@
+concepto,etapa,USD
+"Analista de datos (media jornada, 2 meses)",Desarrollo,2500.0
+"Desarrollador (media jornada, 2 meses)",Desarrollo,3000.0
+Servidor en la nube (2 meses),Desarrollo,100.0
+"Mantenimiento (10 % del analista + servidor, 10 meses)",Resto del primer año,3000.0
+Total desarrollo,Total,5600.0
+Total primer año,Total,8600.0

@@ -20,6 +20,7 @@ Todos los archivos se generan al ejecutar `proyecto_integrador.ipynb` y son los 
 | `ciclo_vida_gasto.csv` | Meses activos, tasa de abandono y cargo mensual por tipo de contrato |
 | `segmentos_valor_riesgo.csv` | Segmentos Golden, Champions, En riesgo de bajo valor y Estables de bajo valor |
 | `retener_vs_adquirir.csv` | Retener a los Golden frente a reemplazarlos con clientes nuevos (CAC genérico USD 300) |
+| `costo_proyecto.csv` | Costo estimado del proyecto (desarrollo de 2 meses y primer año), en orden de magnitud |
 | `valor_cliente_escenarios.csv` | Valor neto preservado según el costo por cliente retenido (USD 100, 1.000, 10.000), al azar, por riesgo y por valor en riesgo |
 | `predicciones_test.csv`, `submission.csv` | Predicciones sobre data/test.csv |
 | `resumen.csv` | Números principales |

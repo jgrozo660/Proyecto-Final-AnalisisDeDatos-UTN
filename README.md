@@ -55,7 +55,13 @@ Usar el ranking como **herramienta de priorización con intervención humana**, 
 | En riesgo de bajo valor | Bajo | Alto | 4 % | 73 % | Solo acciones de bajo costo |
 | Estables de bajo valor | Bajo | Bajo | 46 % | 14 % | Sin acción |
 
-Con un costo de adquisición genérico (CAC) de USD 300, retener a un Golden conviene mientras cueste menos de **USD 854**: con USD 100 por retenido deja unos USD 255 mil más por cada 10.000 clientes que reemplazarlos con clientes nuevos; con USD 1.000 ya no conviene. Valor del cliente = cargo mensual × 24 meses de ciclo de vida (supuestos genéricos). Además, empezar con un **piloto A/B** (20 % priorizado por el modelo vs. 20 % al azar) para medir la tasa real de retención, y monitorear el recall por grupo (en particular, los clientes con dependientes quedan sub-detectados).
+Con un costo de adquisición genérico (CAC) de USD 300, retener a un Golden conviene si
+
+`valor del Golden − costo de retenerlo > valor de un cliente nuevo − CAC`, es decir, `costo de retenerlo < 2.135 − 1.581 + 300 = USD 854` (2,8 veces el CAC): con USD 100 por retenido deja unos USD 255 mil más por cada 10.000 clientes que reemplazarlos con clientes nuevos; con USD 1.000 ya no conviene. Valor del cliente = cargo mensual × 24 meses de ciclo de vida (supuestos genéricos). Además, empezar con un **piloto A/B** (20 % priorizado por el modelo vs. 20 % al azar) para medir la tasa real de retención, y monitorear el recall por grupo (en particular, los clientes con dependientes quedan sub-detectados).
+
+### Costo del proyecto (orden de magnitud)
+
+Con supuestos genéricos: **2 meses** hasta el piloto con un analista de datos (USD 2.500 por mes) y un desarrollador (USD 3.000 por mes) a media jornada, más un servidor en la nube de USD 50 por mes, cuesta **USD 5.600**. Con el mantenimiento (reentrenar y auditar antes de cada campaña, unos USD 300 por mes), el primer año cuesta **USD 8.600**: del orden de USD 10.000. Se recupera reteniendo 8 Golden en lugar de reemplazarlos (`results/costo_proyecto.csv`).
 
 ## Cambios respecto de la pre-entrega (devolución del tutor)
 
