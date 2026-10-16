@@ -77,7 +77,7 @@ Con un costo de adquisición genérico (CAC) de USD 300, retener a un Golden con
 ├── data_log.md                    # registro de decisiones y límites
 ├── .gitignore
 ├── data/
-│   ├── README.md                  # fuente y nota de calidad
+│   ├── README.md                  # fuente, nota de calidad y diccionario de variables
 │   ├── train.csv
 │   └── test.csv
 ├── results/                       # tablas, figuras y predicciones usadas en el informe
