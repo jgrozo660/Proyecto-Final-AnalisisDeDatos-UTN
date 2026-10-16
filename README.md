@@ -46,7 +46,16 @@ En el test, Gradient Boosting obtiene una PR-AUC apenas mayor (0,673 vs. 0,666),
 
 ### Recomendación
 
-Usar el ranking como **herramienta de priorización con intervención humana**, priorizando a los clientes que se van y además gastan mucho (por **valor en riesgo**: probabilidad × valor del cliente). Con un costo de USD 100 por cliente retenido, eso preserva unos USD 824 mil netos por cada 10.000 clientes (3 veces más que al azar); con USD 10.000 por retenido no conviene retener a nadie. Además, empezar con un **piloto A/B** (20 % priorizado por el modelo vs. 20 % al azar) para medir la tasa real de retención, y monitorear el recall por grupo (en particular, los clientes con dependientes quedan sub-detectados).
+Usar el ranking como **herramienta de priorización con intervención humana**, enfocada en los segmentos que valen la pena:
+
+| Segmento | Valor | Riesgo | % de la cartera | Abandono | Acción |
+|---|---|---|---:|---:|---|
+| **Golden** | Alto | Alto | 16 % | 70 % | Rescatar: contacto e incentivo (concentra el 49 % del valor que se pierde) |
+| Champions | Alto | Bajo | 34 % | 18 % | Fidelizar sin descuento |
+| En riesgo de bajo valor | Bajo | Alto | 4 % | 73 % | Solo acciones de bajo costo |
+| Estables de bajo valor | Bajo | Bajo | 46 % | 14 % | Sin acción |
+
+Con un costo de adquisición genérico (CAC) de USD 300, retener a un Golden conviene mientras cueste menos de **USD 854**: con USD 100 por retenido deja unos USD 255 mil más por cada 10.000 clientes que reemplazarlos con clientes nuevos; con USD 1.000 ya no conviene. Valor del cliente = cargo mensual × 24 meses de ciclo de vida (supuestos genéricos). Además, empezar con un **piloto A/B** (20 % priorizado por el modelo vs. 20 % al azar) para medir la tasa real de retención, y monitorear el recall por grupo (en particular, los clientes con dependientes quedan sub-detectados).
 
 ## Cambios respecto de la pre-entrega (devolución del tutor)
 
